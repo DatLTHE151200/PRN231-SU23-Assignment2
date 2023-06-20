@@ -15,6 +15,11 @@ namespace BusinessObjects
 
         }
 
+        public EBookStoreContext(DbContextOptions<EBookStoreContext> options)
+            : base(options)
+        {
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var builder = new ConfigurationBuilder()
